@@ -33,3 +33,17 @@ function process(){
 		setTimeout('process()',1000); //recall process each second
 	}
 }
+
+function handleServerResponse() {
+	if(xmlHttp.readyState==4){
+		if(xmlHttp.status==200){
+			xmlResponse = xmlHttp.responseXML; //response store in elem
+			xmlDocumentElement = xmlResponse.documentElement; // just like html body
+			message = xmlDocumentElement.firstChild.data; // first and only child
+			document.getElementById('underInput').innerHTML = '<span style="color:blue">'+message+'</span>';
+			setTimeout('process()',1000);
+		}else{
+			alert('something went wrong!');
+		}
+	}
+}
