@@ -37,6 +37,7 @@ function process(){
 function handleServerResponse() {
 	if(xmlHttp.readyState==4){
 		if(xmlHttp.status==200){
+			//console.dir(xmlHttp); //debug code still here
 			xmlResponse = xmlHttp.responseXML; //response store in elem
 			xmlDocumentElement = xmlResponse.documentElement; // just like html body
 			message = xmlDocumentElement.firstChild.data; // first and only child

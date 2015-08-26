@@ -2,7 +2,7 @@
 header('Content-Type: text/xml');
 echo '<?xml version="1.0" encoding="UTF-8" standalone="YES" ?>';
 
-/*echo '<response>';
+echo '<response>';
 	$food = $_GET['food'];
 	$foodArray = array('tuna','bacon','beef','loaf','ham');
 	if(in_array($food,$foodArray))
@@ -11,6 +11,6 @@ echo '<?xml version="1.0" encoding="UTF-8" standalone="YES" ?>';
 		echo 'Enter a food you silly bugger';
 	else
 		echo 'We don\'t have '.$food.', sorry mate.';
-echo '</response>';*/
-echo '<response>We have food</response>';
+echo '</response>';
+//echo '<response>We have food</response>';
 ?>
