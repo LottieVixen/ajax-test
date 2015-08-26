@@ -40,7 +40,7 @@ function handleServerResponse() {
 			xmlResponse = xmlHttp.responseXML; //response store in elem
 			xmlDocumentElement = xmlResponse.documentElement; // just like html body
 			message = xmlDocumentElement.firstChild.data; // first and only child
-			document.getElementById('underInput').innerHTML = '<span style="color:blue">'+message+'</span>';
+			document.getElementById('underInput').innerHTML = message;
 			setTimeout('process()',1000);
 		}else{
 			alert('something went wrong!');
