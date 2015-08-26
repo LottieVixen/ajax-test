@@ -27,7 +27,7 @@ function process(){
 	if(xmlHttp.readyState==4 || xmlHttp.readyState==0){ //if async ready
 		food = encodeURIComponent(document.getElementById('userInput').value); //get value
 		xmlHttp.open("GET", "foodstore.php?food="+food,true); //with get send food, async true
-		xml.onreadystatechange = handleServerResponse;
+		xmlHttp.onreadystatechange = handleServerResponse;
 		xmlHttp.send(null); //send get requ
 	} else {
 		setTimeout('process()',1000); //recall process each second
